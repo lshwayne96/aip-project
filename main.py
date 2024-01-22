@@ -4,8 +4,8 @@ from model import load_model, infer_model
 import os
 
 MODEL_PATH = os.environ.get("MODEL_PATH", "./tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf")
-N_CTX = int(os.environ.get("N_CTX", 2048))
-N_THREADS = int(os.environ.get("N_THREADS", 8))
+N_CTX = int(os.environ.get("N_CTX", 512))
+N_THREADS = int(os.environ.get("N_THREADS", 4))
 
 app = FastAPI()
 model = load_model(
